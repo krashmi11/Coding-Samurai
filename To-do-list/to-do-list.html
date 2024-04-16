@@ -13,11 +13,23 @@
         <div class="to-do-list text-center">
             <h2>To Do List  <img src="https://cdn-icons-png.flaticon.com/512/747/747720.png" height="50px" alt="diary"></h2>  
         </div>
-        <form id="to-do-input">
-            <input type="text" id="input" placeholder="Add Task">
-            <button type="submit">Add</button>
+        <form id="to-do-input" class="input-form">
+            <input type="text" id="input" placeholder="Add Task" class="task-input">
+            <!-- Add priority selection -->
+            <select id="priority" class="priority-select">
+                <option value="High">High</option>
+                <option value="Medium">Medium</option>
+                <option value="Low">Low</option>
+            </select>
+            <button type="submit" class="add-btn">Add</button>
         </form>
         
+        <!-- Add filter buttons -->
+        <div class="filter-buttons text-center">
+            <button id="filter-completed" class="filter-btn">Completed</button>
+            <button id="filter-pending" class="filter-btn">Pending</button>
+        </div>
+
         <ul id="list">
             
         </ul>

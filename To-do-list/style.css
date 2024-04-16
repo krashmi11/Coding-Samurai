@@ -1,76 +1,120 @@
-body{
-    background-color:rgb(95, 158, 160);
-}
-.container{
-    background-color:white;
-    width:500;
-    margin-top: 5%;
-    padding:25px;
-    border-radius:10px;
+/* Style for the container */
+.container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
 }
 
-#to-do-input{
+/* Style for the to-do list header */
+.to-do-list {
+    margin-bottom: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+}
+
+.to-do-list img {
+    vertical-align: middle;
+}
+
+/* Style for the input form */
+.input-form {
     display: flex;
-    justify-content: center;
-    align-items: center;
-}
-#to-do-input input{
-    width:80%;
-    overflow: hidden;
-    font-size: 25px;
-    font-weight: 100px;
-    font-family:cursive;
-    border: 2px solid black;
-    border-radius: 20px ;
-    padding: 10px;
-    margin-right:2%;
-
-}
-#to-do-input button{
-    padding:20px 20px;
-    border: none;
-    border-radius: 20px;
-    background-color: lightgreen;
-}
-
-#list{
-    list-style: none;
-    padding:0;
-}
-#list li{
-    margin-top: 10px;
-    padding:10px;
-    border-radius:4px;
-    display:flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 25px;
-    font-family:cursive;
-    margin-left:5%;
-
+    margin-bottom: 20px;
 }
 
-/* Add this to your existing CSS file or in a <style> tag in your HTML */
+.task-input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
 
-.delete-btn {
-    background-color: white;
-    color: white;
+.priority-select {
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-left:2% ;
+}
+
+.add-btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
     border: none;
-    padding: 8px;
-    margin-right:5px;
-    margin-left: 700px; 
+    border-radius: 5px;
     cursor: pointer;
+    margin-left:2%;
+    transition: background-color 0.3s ease;
 }
 
-/* Style checkbox */
-input[type="checkbox"] {
-    margin-right: 70px; /* Adjust margin to create space between checkbox and text */
-    vertical-align: middle; /* Align checkbox vertically with text */
-    transform: scale(2); /* Increase size of checkbox */
+.add-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Style for the filter buttons */
+.filter-buttons {
+    margin-bottom: 20px;
+}
+
+.filter-btn {
+    padding: 10px 20px;
+    margin-right: 10px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.filter-btn:hover {
+    background-color: #218838;
+}
+
+/* Style for the to-do list items */
+#list {
+    list-style-type: none;
+    padding: 0;
 }
 
 li {
-    display: flex;
-    justify-content: space-between; /* Align items to the end */
-    align-items: center; /* Center items vertically */
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+
+li span {
+    margin-right: 10px;
+}
+
+.priority-high {
+    color: #dc3545;
+}
+
+.priority-medium {
+    color: #ffc107;
+}
+
+.priority-low {
+    color: #28a745;
+}
+
+.delete-btn {
+    float: right;
+    background: none;
+    border: none;
+    font-size: 16px;
+    color: #dc3545;
+    cursor: pointer;
+}
+
