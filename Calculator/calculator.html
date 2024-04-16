@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link href="style.css" rel="stylesheet"></link>
+</head>
+<body>
+    <div id="Calculator">
+   
+        <input id="input" readonly>
+        <div id="cal_button">
+            <button class="op_button" id="button1" onclick="clearInput()">C</button>
+            <button value="1" onclick="func(1)">1</button>
+            <button value="2" onclick="func(2)">2</button>
+            <button value="3" onclick="func(3)">3</button>  
+        
+        
+            <button class="op_button" value="+" onclick="func('+')">+</button>
+            <button value="4" onclick="func(4)">4</button>
+            <button value="5" onclick="func(5)">5</button>
+            <button value="6" onclick="func(6)">6</button>
+        
+        
+            <button class="op_button" value="-" onclick="func('-')">-</button>
+            <button value="7" onclick="func(7)">7</button>
+            <button value="8" onclick="func(8)">8</button>
+            <button value="9" onclick="func(9)">9</button>
+        
+        
+            <button class="op_button" value="*" onclick="func('*')">*</button>
+            <button value="0" onclick="func(0)">0</button>
+            <button value="." onclick="func('.')">.</button>
+            <button onclick="calculate()">=</button>     
+            <button class="op_button" value="/" onclick="func('/')">/</button>
+        </div>
+</div>
+<script>
+    function func(num){
+        document.getElementById('input').value+=num;
+    }
+    function clearInput(){
+        document.getElementById('input').value='';
+    }
+    function calculate(){
+        let result=eval(document.getElementById('input').value)
+        document.getElementById('input').value=result;
+    }
+</script>
+</body>
+</html>
